@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Yazıları Kaydırmalı Görünüm</title>
+  <style>
+    /* Galeri yapısı */
+    .gallery-container {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .gallery-wrapper {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item {
+      min-width: 300px;
+      flex: 0 0 300px;
+      margin: 0 10px;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    /* Noktalar */
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<div class="gallery-container">
+  <div class="gallery-wrapper" id="galleryWrapper">
+    <div class="gallery-item"><img src="resim1.jpg" alt="Blog Yazısı 1"></div>
+    <div class="gallery-item"><img src="resim2.jpg" alt="Blog Yazısı 2"></div>
+    <div class="gallery-item"><img src="resim3.jpg" alt="Blog Yazısı 3"></div>
+    <div class="gallery-item"><img src="resim4.jpg" alt="Blog Yazısı 4"></div>
+  </div>
+</div>
+
+<div class="dots">
+  <div class="dot active" onclick="moveSlide(0)"></div>
+  <div class="dot" onclick="moveSlide(1)"></div>
+  <div class="dot" onclick="moveSlide(2)"></div>
+  <div class="dot" onclick="moveSlide(3)"></div>
+</div>
+
+<script>
+  const galleryWrapper = document.getElementById('galleryWrapper');
+  const dots = document.querySelectorAll('.dot');
+  let currentIndex = 0;
+
+  function moveSlide(index) {
+    // Her bir resmin genişliği (300px) + margin (20px) = 320px
+    const offset = index * -320;
+    galleryWrapper.style.transform = `translateX(${offset}px)`;
+
+    // Noktaların aktif sınıfını güncelleme
+    dots[currentIndex].classList.remove('active');
+    dots[index].classList.add('active');
+    currentIndex = index;
+  }
+</script>
+
+</body>
+</html>

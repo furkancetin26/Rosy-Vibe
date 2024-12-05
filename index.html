@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-car.css" />
+    
+    <style>
+        
+        #background-color {
+            background-image: linear-gradient(to right, #8EC5FC, #E0C3FC);
+            position: relative;
+        }
+        #background-image {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            right: 0;
+            top: 70%;
+            transform: translateY(-50%);
+        }
+        #background-button{
+            background-image: linear-gradient(to right, #f07199, #F1447B);
+            border: none;
+        }
+        .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        }
+        .text-color{
+            color: #F1447B;
+        }
+        .icons{
+            font-size: 3rem;
+            color: #F1447B;
+        }
+        @media only screen and (max-width:992px){
+        .icons{
+            font-size: 1.5rem;
+        }
+        .our-features{
+            padding-top: 20rem;
+        }
+        .vector{
+            margin-top: 8rem;
+        }
+        }
+        @media only screen and (max-width:576px) {
+        .head{
+            margin-bottom: 7rem;
+        }
+        .our-features{
+            padding-top: 0rem;
+        }
+        .vector{
+            margin-top: 0rem;
+        }
+        }
+        body{
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+        .transition{
+            transition: transform 0.2s ease;
+        }
+        .transition:hover{
+            transform: translateY(-5px);
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: #F1447B;
+        }
+        
+        .gallery-container {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        max-width: 1270px;
+        margin: 0 auto;
+        
+        }
+        .gallery-wrapper {
+        display: flex;
+        transition: transform 0.5s;
+        }
+        .gallery-item {
+        min-width: 300px;
+        flex: 0 0 300px;
+        margin: 0 20px;
+        
+        }
+        .gallery-item img {
+        width: 100%;
+        border-radius: 8px;
+        transition: transform 0.5s ease;
+        
+        }
+        
+        /* Noktalar */
+        .dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        }
+        .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        cursor: pointer;
+        }
+        .dot.active {
+        background-color: #333;
+        }
+        .fa-twitter{
+            color: #1DA1F2;
+        }
+        .fa-facebook{
+            color: #4470CF;
+        }
+        .fa-youtube{
+            color: #C8312A;
+        }
+        input:focus {
+        border-color: #F1447B !important; /* İstediğin renk */
+        box-shadow: 0 0 5px #F1447B !important; /* İstediğin renk ile gölge efekti */
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <header class="fixed-top bg-white">
+        <div class="row">
+            <div class="col-sm-10 offset-sm-1">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container">
+                        <a class="navbar-brand poppins-regular fs-2" href="#"><p class="text-color">Portfolio</p></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end poppins-regular">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                    
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="">Contact</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="row head rounded-5" style="height: 40rem; margin-top: 10rem;" id="background-color">
+            <div class="col-sm-12 col-lg-6 ps-5 d-flex flex-column justify-content-center" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000">
+                <h2 class="text-white">Networking <span class="text-color">solutions</span> for</h2>
+                <h2 class="text-white">worldwide communication</h2>
+                <p class="text-white word-break mt-3 fs-5">We're a company that focuses on establishing long-term relationships with customers.</p>
+                <button type="" class="btn text-white w-25 btn-lg mt-3 transition" id="background-button">Click</button>
+            </div>
+            <!-- Resim -->
+            <div class="col-sm-12 col-lg-6 position-relative " data-aos="fade-zoom"  data-aos-delay="200" data-aos-duration="1000">
+                <img src="vector2.png" alt="Vector Image" id="background-image" class="vector">
+            </div>
+        </div>
+
+        <div class="row mt-5 our-features">
+            <h3 class="text-center mt-5 text-color">Our Features</h3>
+            <h3 class="text-center">The service we offer is </h3>
+            <h3 class="text-center">specifically designed to meet your needs.</h3>
+            <div class="col-sm-4 mt-5">
+                <div class="row">
+                    <div class="col-1 col-sm-2"><i class="fa-solid fa-tv icons"></i></div>
+                    <div class="col-11 col-sm-10">
+                        <h4>Software Integration</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, libero. Sed quod ea praesentium cumque dicta mollitia animi fugit minima!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-5">
+                <div class="row">
+                    <div class="col-1 col-sm-2"><i class="fa-solid fa-shield icons"></i></div>
+                    <div class="col-11 col-sm-10">
+                        <h4>Network Security</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium natus dolorem ducimus tenetur assumenda quos atque eum dolore officia eligendi?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-5">
+                <div class="row">
+                    <div class="col-1 col-sm-2"><i class="fa-solid fa-cloud icons"></i></div>
+                    <div class="col-11 col-sm-10">
+                        <h4>Cloud Services</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa enim cum error porro quae! Possimus veritatis illo dignissimos explicabo provident.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-5 ">
+                <div class="row">
+                    <div class="col-1 col-sm-2"><i class="fa-solid fa-network-wired icons"></i></div>
+                    <div class="col-11 col-sm-10">
+                        <h4>Software Integration</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, exercitationem. Similique, praesentium quo! Nulla vitae suscipit porro recusandae ratione ad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-5">
+                <div class="row">
+                    <div class="col-1 col-sm-2"><i class="fa-solid fa-code icons"></i></div>
+                    <div class="col-11 col-sm-10">
+                        <h4>Network Security</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat iusto nostrum reiciendis vel, odio excepturi enim dolore nisi? Ipsam, debitis!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mt-5">
+                <div class="row">
+                    <div class="col-1 col-sm-2"><i class="fa-solid fa-server icons"></i></div>
+                    <div class="col-11 col-sm-10">
+                        <h4>Cloud Services</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ipsa fugit alias at ipsam consequuntur porro unde doloribus cupiditate quae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 10rem;">
+            <div class="col-sm-12 col-lg-6"><img class="w-100" src="vector3.png" alt=""></div>
+            <div class="col-sm-12 col-lg-6">
+                <div class="row" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
+                    <h3 class="text-color">Have Perfect Control</h3>
+                    <h2 class="mt-3">We bring solutions to make life easier for our customers.</h2>
+                    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, tempora vitae tenetur recusandae magni incidunt omnis laudantium atque eum qui molestias fugiat repudiandae quasi reprehenderit facilis dolor quaerat minus numquam.</p>
+                    <div class="col-sm-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-2"><i class="fa-solid fa-check"></i></div>
+                        <div class="col-10"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="col-2"><i class="fa-solid fa-check"></i></div>
+                        <div class="col-10"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </div>
+                </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="row">
+                        <div class="col-2"><i class="fa-solid fa-check"></i></div>
+                        <div class="col-10"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="col-2"><i class="fa-solid fa-check"></i></div>
+                        <div class="col-10"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center" style="margin-top: 10rem;" >
+            <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000"><h3 class="text-color ">What Makes Us Different?
+            </h3><h2 class="mt-sm-5">We make spending stress free so you have the perfect control.
+            </h2><p class="mt-sm-5">Etiam porta sem malesuada magna mollis euismod. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus. Integer posuere erat a ante venenatis dapibus posuere velit.</p>
+            
+            <p><i class="fa-solid fa-check pe-2"></i>Lorem ipsum dolor sit amet consectetur.</p>
+            <p><i class="fa-solid fa-check pe-2"></i>Lorem ipsum dolor sit amet consectetur.</p>
+            <p><i class="fa-solid fa-check pe-2"></i>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2"><img class="w-100 rounded-5" src="job.jpg" alt=""></div>
+        </div>
+
+        <div class="row rounded-5 d-flex align-items-center" id="background-color" style="margin-top: 10rem;">
+            <div class="col-sm-12 col-lg-3 p-5"><p class="fs-3 poppins-regular">We are proud of our works</p><p class="fs-5">We bring solutions to make life easier for our customers.</p></div>
+            <div class="col-sm-4 col-lg-3 p-5 text-center"><i class="fa-solid fa-bullseye text-color fs-1"></i><p class="mt-2 fs-1 poppins-regular" id="counter">0</p><p>Completed Projects</p></div>
+            <div class="col-sm-4 col-lg-3 p-5 text-center"><i class="fa-solid fa-chart-line text-color fs-1"></i><p class="mt-2 fs-1 poppins-regular" id="completed-projects">1x</p><p>Completed Projects</p></div>
+            <div class="col-sm-4 col-lg-3 p-5 text-center"><i class="fa-solid fa-face-smile text-color fs-1"></i><p class="mt-2 fs-1 poppins-regular" id="satisfaction-rate">%0</p><p>Completed Projects</p></div>
+        
+        </div>
+
+        <div class="row" style="margin-top: 10rem;" data-aos="fade-down" data-aos-delay="0" data-aos-duration="1000">
+            <h5 class="text-center text-color">Case Studies</h5>
+            <h2 class="text-center">Check out some of our awesome projects</h2>
+            <h2 class="text-center"> with creative ideas and great design.</h2>
+            <div class="gallery-container mt-5">
+                <div class="gallery-wrapper" id="galleryWrapper">
+                  <div class="gallery-item"><a href="blog1.html"><img src="blog.jpg" alt="Blog Yazısı 1"><h5 class="mt-3">Lorem ipsum dolor sit amet.</h3><p>Lorem ipsum dolor sit amet.</p></a></div>
+                  <div class="gallery-item"><a href="blog1.html"><img src="blog2.jpg" alt="Blog Yazısı 2"><h5 class="mt-3">Lorem ipsum dolor sit amet.</h3><p>Lorem ipsum dolor sit amet.</p></a></div>
+                  <div class="gallery-item"><a href="blog1.html"><img src="blog3.jpg" alt="Blog Yazısı 3"><h5 class="mt-3">Lorem ipsum dolor sit amet.</h3><p>Lorem ipsum dolor sit amet.</p></a></div>
+                  <div class="gallery-item"><a href="blog1.html"><img src="blog4.jpg" alt="Blog Yazısı 4"><h5 class="mt-3">Lorem ipsum dolor sit amet.</h3><p>Lorem ipsum dolor sit amet.</p></a></div>
+                  <div class="gallery-item"><a href="blog1.html"><img src="blog4.jpg" alt="Blog Yazısı 4"><h5 class="mt-3">Lorem ipsum dolor sit amet.</h3><p>Lorem ipsum dolor sit amet.</p></a></div>
+                  <div class="gallery-item"><a href="blog1.html"><img src="blog4.jpg" alt="Blog Yazısı 4"><h5 class="mt-3">Lorem ipsum dolor sit amet.</h3><p>Lorem ipsum dolor sit amet.</p></a></div>
+                  <div class="gallery-item"><a href="blog1.html"><img src="blog4.jpg" alt="Blog Yazısı 4"><h5 class="mt-3">Lorem ipsum dolor sit amet.</h3><p>Lorem ipsum dolor sit amet.</p></a></div>
+                  <div class="gallery-item"><a href="blog1.html"><img src="blog4.jpg" alt="Blog Yazısı 4"><h5 class="mt-3">Lorem ipsum dolor sit amet.</h3><p>Lorem ipsum dolor sit amet.</p></a></div>
+                    
+                </div>
+              </div>
+              
+              <div class="dots mt-3">
+                <div class="dot active" onclick="moveSlide(0)"></div>
+                <div class="dot" onclick="moveSlide(1)"></div>
+                <div class="dot" onclick="moveSlide(2)"></div>
+                <div class="dot" onclick="moveSlide(3)"></div>
+              </div>
+        </div>
+
+        <div class="row" style="margin-top: 10rem;">
+            <div class="col-sm-12 col-lg-6">
+                <div class="row">
+                    <div class="col-sm-6"><img src="blog.jpg" alt="" class="w-100 rounded-5"></div>
+                    <div class="col-sm-6"><img src="blog2.jpg" alt="" class="w-100 rounded-5 pt-2"></div>
+                    <div class="text-center"><img src="blog3.jpg" alt="" class="w-75 pt-2 rounded-5"></div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 d-flex align-items-center" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
+                <div class="row pt-sm-5">
+                    <h4 class="text-color">Who Are We?</h4>
+                    <h2 class="mt-3">Company that believes in the power of creative strategy.</h2>
+                    <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, tempora vitae tenetur recusandae magni incidunt omnis laudantium atque eum qui molestias fugiat repudiandae quasi reprehenderit facilis dolor quaerat minus numquam.</p>
+                    <div class="col-sm-12 col-lg-6">
+                    <div class="row">
+                        <div class="col-2"><i class="fa-solid fa-check"></i></div>
+                        <div class="col-10"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="col-2"><i class="fa-solid fa-check"></i></div>
+                        <div class="col-10"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </div>
+                </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <div class="row">
+                        <div class="col-2"><i class="fa-solid fa-check"></i></div>
+                        <div class="col-10"><p>Lorem ipsum dolor sit amet.</p></div>
+                        <div class="col-2"><i class="fa-solid fa-check"></i></div>
+                        <div class="col-10"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex align-items-center" style="margin-top: 10rem;">
+            <div class="col-lg-6 order-2 order-sm-1 order-lg-2"><img src="contactus.png" alt="" class="w-100 rounded-5"></div>
+            <div class="col-lg-6 order-1 order-sm-2 pt-sm-5 order-lg-1" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
+                <h4 class="text-color">Contact Us</h4>
+                <h2>Got any questions? Don't hesitate to get in touch.</h1>
+                <div class="row mt-5">
+                    <div class="col-1 pt-2"><i class="fa-solid fa-thumbtack fa-2xl text-color"></i></div>
+                    <div class="col-11"><p class="poppins-regular">Address</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, deleniti.</p></div>
+                    <div class="col-1 pt-2"><i class="fa-solid fa-phone fa-2xl text-color"></i></div>
+                    <div class="col-11"><p class="poppins-regular">Phone</p><p>555555555</p></div>
+                    <div class="col-1 pt-2"><i class="fa-solid fa-envelope fa-2xl text-color"></i></div>
+                    <div class="col-11"><p class="poppins-regular">Mail</p><a href="mailto:mail@gmail.com">mail@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row rounded-5 text-center" id="background-color" style="margin-top: 5rem;">
+            <div class="col-sm-12 p-5 ">
+                <h4 class="text-color">Join Our Community</h4>
+                <h2 class="text-white">We are trusted by over 5000+ clients.</h2> <h2 class="text-white">Join them now and grow your business.</h2>
+                <button class="btn text-white btn-lg mt-3 transition" id="background-button">Get Started</button>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="row" style="margin-top: 10rem;">
+            <div class="col-sm-3 mt-5">
+                <h2 class="text-color">Portfolio</h2>
+                <p>© 2024 Portfolio. All rights reserved.</p>
+                <a href=""><i class="fa-brands fa-instagram fa-2xl text-color me-lg-2"></i></a>
+                <a href=""><i class="fa-brands fa-twitter fa-2xl me-lg2"></i></a>
+                <a href=""><i class="fa-brands fa-youtube fa-2xl me-lg-2"></i></a>
+                <a href=""><i class="fa-brands fa-facebook fa-2xl me-lg-2"></i></a>
+            </div>
+            <div class="col-sm-3 mt-5">
+                <h4>Get in Touch</h4>
+                <p>Moonshine St. 14/05</p>
+                <p>Light City, London,</p>
+                <p>United Kingdom</p>
+                <a href="mailto:mail@gmail.com"><p>mail@gmail.com</p></a>
+                <p>00 (123) 456 78 90</p>
+            </div>
+            <div class="col-sm-3">
+                <h4 class="mt-5">Learn More</h4>
+                <a href=""><p>About Us</p></a>
+                <a href=""><p>Our Story</p></a>
+                <a href=""><p>Projects</p></a>
+                <a href=""><p>Terms of Use</p></a>
+                <a href=""><p>Privacy Policy</p></a>
+            </div>
+            <div class="col-sm-3">
+                <h4 class="mt-5">Our Newsletter</h4>
+                <p>Subscribe to our newsletter to get our news & deals delivered to you.</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Email Adress" aria-label="Email Adress" aria-describedby="basic-addon2">
+                    <span class="input-group-text text-white" id="basic-addon2" style="background-image: linear-gradient(to right, #f07199, #F1447B);">JOIN</span>
+                  </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+  
+</script>
+
+<script>
+    AOS.init();
+
+    // Başlangıç değerleri
+let projectCount = 0; // Tamamlanan projelerin sayısı
+let completedProjectsCount = 0; // Tamamlanan projelerin sayısı (4x için)
+let satisfactionRate = 0; // Müşteri memnuniyeti yüzdesi (%99.9 için)
+
+const targetProjects = 100; // Hedef proje sayısı
+const targetCompletedProjects = 4; // Hedef tamamlanan projelerin çarpanı (4x)
+const targetSatisfactionRate = 99.9; // Hedef memnuniyet yüzdesi
+
+const projectCounterElement = document.getElementById("counter");
+const completedProjectsCounterElement = document.querySelector("#completed-projects");
+const satisfactionRateElement = document.querySelector("#satisfaction-rate");
+
+let countStarted = false; // Sayımın başladığını takip etmek için
+
+function startCounter() {
+    // Proje sayısını artır
+    const projectInterval = setInterval(() => {
+        projectCount += 1; // Sayıyı artır
+        projectCounterElement.innerText = projectCount + "+"; // Görselleştir
+
+        // Hedefe ulaşıldığında sayımı durdur
+        if (projectCount >= targetProjects) {
+            clearInterval(projectInterval);
+        }
+    }, 10); // Süreyi ayarla
+
+    // Tamamlanan projelerin sayısını artır
+    const completedProjectsInterval = setInterval(() => {
+        completedProjectsCount += 1; // Sayıyı artır
+        completedProjectsCounterElement.innerText = completedProjectsCount + "x"; // Görselleştir
+
+        // Hedefe ulaşıldığında sayımı durdur
+        if (completedProjectsCount >= targetCompletedProjects) {
+            clearInterval(completedProjectsInterval);
+        }
+    }, 300); // Süreyi ayarla (örneğin, her saniyede bir artır)
+
+    // Müşteri memnuniyeti yüzdesini artır
+    const satisfactionRateInterval = setInterval(() => {
+        satisfactionRate += 10; // Sayıyı artır
+        satisfactionRateElement.innerText = satisfactionRate.toFixed(1) + "%"; // Görselleştir
+
+        // Hedefe ulaşıldığında sayımı durdur
+        if (satisfactionRate >= targetSatisfactionRate) {
+            clearInterval(satisfactionRateInterval);
+        }
+    }, 120); // Süreyi ayarla (örneğin, her 100ms'de bir artır)
+}
+
+// Elemanın görünümde olup olmadığını kontrol etme fonksiyonu
+function isElementInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Sayfa kaydırıldığında sayımın başlamasını kontrol et
+window.addEventListener("scroll", () => {
+    if (isElementInViewport(projectCounterElement) && !countStarted) {
+        startCounter(); // Görünür olduğunda sayımı başlat
+        countStarted = true; // Birden fazla başlangıcı önlemek için
+    }
+});
+
+// İlk kontrol, elementin zaten görünür olup olmadığını kontrol etmek için
+if (isElementInViewport(projectCounterElement)) {
+    startCounter();
+    countStarted = true;
+}
+
+
+</script>
+
+<script>
+    const galleryWrapper = document.getElementById('galleryWrapper');
+  const dots = document.querySelectorAll('.dot');
+  let currentIndex = 0;
+
+  function moveSlide(index) {
+    // Her bir resmin genişliği (300px) + margin (20px) = 320px
+    const offset = index * -325;
+    galleryWrapper.style.transform = `translateX(${offset}px)`;
+
+    // Noktaların aktif sınıfını güncelleme
+    dots[currentIndex].classList.remove('active');
+    dots[index].classList.add('active');
+    currentIndex = index;
+  }
+</script>
+
+</body>
+</html>
